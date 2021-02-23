@@ -1,0 +1,38 @@
+{
+  "name": "@tzforms/api",
+  "version": "0.1.0",
+  "description": "API for tzforms.",
+  "main": "dist/index.js",
+  "scripts": {
+    "prestart": "npm run build",
+    "start": "run-p watch serve",
+    "build": "tsc -p .",
+    "watch": "tsc -p . --watch",
+    "serve": "nodemon --require dotenv/config ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tzforms/tzforms-api.git"
+  },
+  "author": "Matthew Downs <matthew.downsc@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tzforms/tzforms-api/issues"
+  },
+  "homepage": "https://github.com/tzforms/tzforms-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "tmp": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.31",
+    "@types/tmp": "^0.2.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.1.5"
+  }
+}
