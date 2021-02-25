@@ -8,7 +8,7 @@
     "start": "run-p watch serve",
     "build": "tsc -p .",
     "watch": "tsc -p . --watch",
-    "serve": "nodemon --require dotenv/config ."
+    "serve": "nodemon ."
   },
   "repository": {
     "type": "git",

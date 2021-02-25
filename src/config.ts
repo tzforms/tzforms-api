@@ -1,6 +1,9 @@
 import dotenv from 'dotenv';
+import path from 'path';
 
-const { error, parsed } = dotenv.config();
+const envPath = path.resolve(__dirname, '../.env');
+
+const { error, parsed } = dotenv.config({ path: envPath });
 if (error || !parsed) throw new Error('Failed to parse .env file');
 
 export type Config = {
