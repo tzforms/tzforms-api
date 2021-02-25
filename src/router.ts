@@ -30,6 +30,10 @@ async function compileArchetype(target: Target, code: string): Promise<string | 
     }
 }
 
+router.get('/compile', (req, res) => {
+    res.status(200).send({ ARCHETYPE_PATH: `${config.ARCHETYPE_PATH}`, PROCESS: process.env});
+});
+
 router.post('/compile', async (req, res) => {
     try {
         if (!req.body.code) throw new Error('Code not provided.');
