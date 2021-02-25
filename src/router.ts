@@ -15,6 +15,7 @@ async function compileArchetype(target: Target, code: string): Promise<string | 
         const result = await new Promise<string | Error>((resolve, reject) => {
             const command = `${config.ARCHETYPE_PATH} -t ${target} ${tmpFilePath}`;
             exec(command, (error, stdout, stderr) => {
+                console.log(error, stdout, stderr);
                 if (error || stderr) reject(stderr || (error ? error.message : 'Failed to compile code.'));
                 else resolve(stdout);
             });
